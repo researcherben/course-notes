@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(){
+  int len = 5, wid = 10, tot;
+  float average = 0.0;
+  tot = len + wid;
+
+  printf("(%d + %d) is %d\n", len, wid, tot); 
+  printf("average = %.2f\n", average); // limit output to 2 significant places
+  printf("letter = %c\n", letter);
+}

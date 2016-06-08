@@ -1,0 +1,27 @@
+//   Exercise 14 - 2
+//
+//   1.   Place each of the functions print, add, init, into a
+//        separate file.
+//
+//   2.   At the top of each file, place the line
+//        #include "money.h"
+//
+//   3.   Compile each file separately and then link.
+//
+//   4.   On UNIX (for example)
+//
+//        $ cc -c print.c add.c init.c
+//        $ cc main.c print.o add.c init,o
+//
+//   5.    money.h is shown 
+//
+//
+struct money {
+     int dollars;
+     int cents;
+};
+typedef struct money MONEY, *PMONEY;
+MONEY init(int dollars, int cents);
+void add2(MONEY a, MONEY b, PMONEY c);
+void print(MONEY a);
+MONEY init(int dollars, int cents);
