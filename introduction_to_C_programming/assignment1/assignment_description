@@ -1,0 +1,27 @@
+IN THIS COURSE, YOUR MANAGEMENT HAS REQUESTED 
+THAT YOU BE GIVEN TWO GRADED ASSIGNMENTS!!
+
+What follows is a description of your first graded assignment.
+
+a) 	Write a program that generates a random number in the range
+	0 to 99.
+
+b) 	Then, repatedly ask the user to guess the number until they
+	guess it correctly.
+
+c) 	If the user enters something that is not a number, print
+	an error message that specifies that they did not enter
+	a number.
+
+d) 	If a guess is out of range (< 0 || > 99 ), print a message
+	that specifies that the number was out of range.
+
+e)	If the number was too high, print a message that specifies
+	that the number was too high.
+
+f)	If the number was too low, print a message that specifies
+	that the number was too low.
+
+g) 	When the user guesses correctly, print a suitable message
+	that tells the user how many guesses it took them and then 
+	terminate the program.
