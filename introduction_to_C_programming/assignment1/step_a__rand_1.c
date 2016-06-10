@@ -3,9 +3,7 @@
 int main()
 {
 	int r;
-	
-	int i;
-	for ( i = 0; i < 10; i++)
+	for (int indx = 0; indx < 10; indx++)
 	{
 		r = rand();
 		printf("%d\n", r);
