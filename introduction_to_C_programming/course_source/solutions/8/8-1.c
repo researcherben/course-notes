@@ -21,12 +21,21 @@ main()
 
 void reverse(char s[])
 {
-     int i = 0, j;
+     int i = 0, j; // i is start, j is index for end of array
      char temp;
      
      j = strlen(s) - 1;  // point at char before '\0'
      
+/*
+
+abcde\0  i=0; j=5
+ebcda\0  i=1; j=4
+edcba\0  i=2; j=3
+
+*/
+
      while(i < j) {
+          // swap two characters
           temp = s[i];
           s[i] = s[j];
           s[j] = temp;

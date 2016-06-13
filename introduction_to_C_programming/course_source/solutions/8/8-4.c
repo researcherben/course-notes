@@ -11,20 +11,19 @@ int palindrome(char s[]);
 
 main()
 {
-    int result, len;
+	int result, len;
 	char line[LINE_SIZE];
 	
-    printf("Enter a string to check: ");
+	printf("Enter a string to check: ");
 	fgets(line, LINE_SIZE, stdin);
 
 	len = strlen(line);
-	if(line[len - 1] == '\n')  // strip off newline
-	    line[len - 1] = '\0';
+	line[len - 1] = '\0';
 	    
 	result = palindrome(line);
 
 	if (result)
-	    printf("WOO HOO, IT'S A PALINDROME!\n");
+	    printf("WOO HOO, IT'S A PALINDROME!\n"); // racecar, amanaplanacanalpanama
 	else
 	    printf("Sorry, not a palindrome\n");	
 }
@@ -47,13 +46,15 @@ void reverse(char s[])
 
 int palindrome(char s[])
 {
-     char other[LINE_SIZE];
+	char other[LINE_SIZE];
      
-     strcpy(other,s);
-     reverse(other);
-     
+	strcpy(other,s);
+	reverse(other);
+
+	return strcmp(other,s) == 0;
+/*    
      if(strcmp(other,s) == 0)
           return(1);
-          
      return(0);
+*/
 }

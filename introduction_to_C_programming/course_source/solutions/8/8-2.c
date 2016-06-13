@@ -27,10 +27,10 @@ void changecase(char s[])
      
      for (i = 0; i < j; i++)
      {
-          if(s[i] >= 'A' && s[i] <= 'Z')
-               s[i] = s[i] - 'A' + 'a';
+          if(s[i] >= 'A' && s[i] <= 'Z') // if uppercase
+               s[i] = s[i] - 'A' + 'a';  // swap upper to lower
                
-          else if ( s[i] >= 'a' && s[i] <= 'z')
-               s[i] = s[i] - 'a' + 'A';
+          else if ( s[i] >= 'a' && s[i] <= 'z') // if lowercase
+               s[i] = s[i] - 'a' + 'A';         // swap lower to upper
      }
 }
