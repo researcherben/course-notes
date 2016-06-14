@@ -1,0 +1,70 @@
+$ cc step_a__rand_3.c
+$ ./a.out 
+96
+$ ./a.out 
+62
+$ ./a.out 
+69
+$ cc step_b__guess_1.c
+$ ./a.out 
+random number: 32
+Guess the random number in the range 0 to 100: 33
+your guess [[33]] does not match [[32]]
+Guess the random number in the range 0 to 100: 32
+got it!
+$ cc step_c__nan_detection_1.c
+$ ./a.out 
+random number: 23
+Guess the random number in the range 0 to 100: 3
+your guess [[3]] does not match [[23]]
+Guess the random number in the range 0 to 100: asdf
+non-numeric input detected. Try again
+Guess the random number in the range 0 to 100: 23
+got it!
+$ cc step_d__range_bounds_1.c
+$ ./a.out 
+random number: 87
+Guess the random number in the range 0 to 100: 23
+your guess [[23]] does not match [[87]]
+Guess the random number in the range 0 to 100: 102
+guess is out of range. Try again
+Guess the random number in the range 0 to 100: 87
+got it!
+$ cc step_e__too_high_1.c
+$ ./a.out 
+random number: 78
+Guess the random number in the range 0 to 100: 4
+your guess [[4]] does not match [[78]]
+Guess the random number in the range 0 to 100: 402
+guess is out of range: too high. Try again
+Guess the random number in the range 0 to 100: 78
+got it!
+$ cc step_f__too_low.c
+$ ./a.out 
+random number: 3
+Guess the random number in the range 0 to 100: 5
+your guess [[5]] does not match [[3]]
+Guess the random number in the range 0 to 100: -32
+guess is out of range: too low. Try again
+Guess the random number in the range 0 to 100: 3
+got it!
+$ cc step_g__guess_count.c
+$ ./a.out 
+random number: 27
+Guess the random number in the range 0 to 100: 23
+your guess [[23]] does not match [[27]]
+guess count: 1
+Guess the random number in the range 0 to 100: -24
+guess is out of range: too low. Try again
+guess count: 2
+Guess the random number in the range 0 to 100: 4543
+guess is out of range: too high. Try again
+guess count: 3
+Guess the random number in the range 0 to 100: asdf
+non-numeric input detected. Try again
+guess count: 4
+Guess the random number in the range 0 to 100: 27
+got it!
+guess count: 5
+$ 
+
