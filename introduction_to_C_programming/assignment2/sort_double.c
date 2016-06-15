@@ -24,7 +24,7 @@ int main(){
     }
     printf("before: %.1f, %.1f, %.1f, %.1f, %.1f\n", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4]);
     if (swap_indx != -1){
-      int temp=numbers[lead_indx];
+      double temp=numbers[lead_indx];
       numbers[lead_indx]=numbers[swap_indx];
       numbers[swap_indx]=temp;
     }
