@@ -25,7 +25,7 @@ void sort_doubles(double *numbers,int number_of_doubles);
 void sort_struct_doubles(struct employee *roster,int number_of_employees);
 void sort_struct_names(struct employee *roster,int number_of_employees);
 void sort_struct_cities(struct employee *roster,int number_of_employees);
-void sort_strings_high_to_low(char names[][MAX_INPUT_LENGTH],int number_of_employees);
+void sort_strings_low_to_high(char names[][MAX_INPUT_LENGTH],int number_of_employees);
 
 
 int main(){
@@ -106,35 +106,31 @@ void sort_struct_doubles(struct employee *roster,int number_of_employees){
     }
   }
 }
-
-void sort_strings_high_to_low(char names[][MAX_INPUT_LENGTH],int number_of_employees){
-  for (int lead_indx=0; lead_indx<number_of_employees; lead_indx++){
+/*
+void sort_strings_low_to_high(char names[][MAX_LINE_LENGTH],int number_of_lines){
+  for (int lead_indx=0; lead_indx<number_of_lines; lead_indx++){
     int swap_indx=-1;
-    char lowest_value[MAX_INPUT_LENGTH];
+    char lowest_value[MAX_LINE_LENGTH];
     lowest_value[0]='z';
     lowest_value[1]='\0';
-    for (int comparison_indx=lead_indx+1; comparison_indx<number_of_employees; comparison_indx++){
-      printf("lead: %s; comparison: %s\n",names[lead_indx],names[comparison_indx]);
-      if ( (strcmp( names[comparison_indx], names[lead_indx]))>0){
-        printf("%s is lower than %s\n",names[comparison_indx], names[lead_indx]);
-        printf("result of strcmp, lowest [[%s]] vs name[[%s]]: %d\n",lowest_value,names[comparison_indx],strcmp( lowest_value,names[comparison_indx]));
-        if ( (strcmp( lowest_value, names[comparison_indx]))>0){ // new lowest value
+    for (int comparison_indx=lead_indx+1; comparison_indx<number_of_lines; comparison_indx++){
+      if ( (strcmp(       names[lead_indx],names[comparison_indx]))>0){
+        if ( (strcmp(        lowest_value,names[comparison_indx]))>0){ // new lowest value
           strcpy(lowest_value,names[comparison_indx]);
-          printf("new lowest value: %s\n",lowest_value);
           swap_indx=comparison_indx;
         }
       }
     }
     if (swap_indx != -1){
-      char temp[MAX_INPUT_LENGTH];
+      char temp[MAX_LINE_LENGTH];
       strcpy(temp,names[lead_indx]);
       strcpy(names[lead_indx],names[swap_indx]);
       strcpy(names[swap_indx],temp);
     }
+    print_names(names, NUMBER_OF_LINES);
   }  
-
 }
-
+//*/
 void sort_struct_names(struct employee *roster,int number_of_employees){
   for (int lead_indx=0; lead_indx<number_of_employees; lead_indx++){
     int swap_indx=-1;
@@ -142,7 +138,7 @@ void sort_struct_names(struct employee *roster,int number_of_employees){
     lowest_value[0]='z';
     lowest_value[1]='\0';
     for (int comparison_indx=lead_indx+1; comparison_indx<number_of_employees; comparison_indx++){
-      if ( (strcmp( roster[comparison_indx].name, roster[lead_indx].name))>0){
+      if ( (strcmp( roster[lead_indx].name, roster[comparison_indx].name))>0){
         if ( (strcmp( lowest_value, roster[comparison_indx].name))>0){ // new lowest value
           strcpy(lowest_value,roster[comparison_indx].name);
           swap_indx=comparison_indx;
@@ -165,7 +161,7 @@ void sort_struct_cities(struct employee *roster,int number_of_employees){
     lowest_value[0]='z';
     lowest_value[1]='\0';
     for (int comparison_indx=lead_indx+1; comparison_indx<number_of_employees; comparison_indx++){
-      if ( (strcmp( roster[comparison_indx].city, roster[lead_indx].city))>0){
+      if ( (strcmp( roster[lead_indx].city, roster[comparison_indx].city))>0){
         if ( (strcmp( lowest_value, roster[comparison_indx].city))>0){ // new lowest value
           strcpy(lowest_value,roster[comparison_indx].city);
           swap_indx=comparison_indx;

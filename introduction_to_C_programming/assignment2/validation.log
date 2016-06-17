@@ -1,0 +1,67 @@
+$ cc step6_sorting_structs.c
+$ cat data.dat 
+Michael Columbia 88000.76
+Joel Hartford 92000.84
+Judy Providence 88000.63
+Arthur Buffalo 100000.50
+Sally Boston 72000.00
+$ ./a.out 
+Michael Columbia 88000.76
+Joel Hartford 92000.84
+Judy Providence 88000.63
+Arthur Buffalo 100000.50
+Sally Boston 72000.00
+Options: 
+1) Name
+2) City
+3) Salary
+4) Exit
+Make a selection: [1-4]: 1
+sort and display the data in sorted order by name
+
+Arthur  Buffalo   100000.50
+Joel  Hartford   92000.84
+Judy  Providence   88000.63
+Michael  Columbia   88000.76
+Sally  Boston   72000.00
+
+Options: 
+1) Name
+2) City
+3) Salary
+4) Exit
+Make a selection: [1-4]: 2
+sort and display the data by city
+
+Sally  Boston   72000.00
+Arthur  Buffalo   100000.50
+Michael  Columbia   88000.76
+Joel  Hartford   92000.84
+Judy  Providence   88000.63
+
+Options: 
+1) Name
+2) City
+3) Salary
+4) Exit
+Make a selection: [1-4]: 3
+sort and display the data by salary
+
+Sally  Boston   72000.00
+Judy  Providence   88000.63
+Michael  Columbia   88000.76
+Joel  Hartford   92000.84
+Arthur  Buffalo   100000.50
+
+Options: 
+1) Name
+2) City
+3) Salary
+4) Exit
+Make a selection: [1-4]: 4
+
+input history:
+1, 2, 3, 4, 
+exiting
+
+
