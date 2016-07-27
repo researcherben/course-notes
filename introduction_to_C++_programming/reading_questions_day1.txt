@@ -1,0 +1,203 @@
+https://www.linuxtopia.org/online_books/programming_books/c++_practical_programming/
+
+http://www.extremeprogramming.org/
+
+Three important object oriented concepts:
+* Encapsulation (data+functions)
+* Inheritance
+* Polymorphism
+
+== polymorphism ==
+
+("many forms")
+
+
+          --------------
+          | automobile |
+          | (start     |
+          | engine)    |
+          --------------
+             |
+       --------------------------
+       |            |           |
+ -----------   ------------   ---------------
+ | hybrid  |   | electric |   | natural gas | 
+ | (start  |   | (start   |   | (start      |
+ | engine) |   | engine)  |   | engine)     |
+ -----------   ------------   ---------------
+
+Each object as a "start engine" function
+Polymorphism = send same message (start engine) to all objects 
+
+two kinds of polymorphism: 
+* at runtime (late binding) [function overriding: same arguments, different classes ]
+* at compile time(early binding) [function overloading: different argument list; typically same class]
+
+== substitutability ==
+
+source:
+https://www.linuxtopia.org/online_books/programming_books/thinking_in_c++/Chapter01_001.html
+
+"All objects of a particular type can receive the same messages."
+
+--> class inheritance is a core concept in object oriented programming
+
+same interface
+
+sustitutability = plugability
+
+== UML ==
+
+source:
+https://en.wikipedia.org/wiki/Unified_Modeling_Language
+
+UML = Unified Modeling Language 
+"intended to provide a standard way to visualize the design of a system"
+
+standard set by OMG (Object Management Group)
+
+== class box in UML ==
+
+Source:
+https://en.wikipedia.org/wiki/Class_diagram#Introduction
+
+In the diagram, classes are represented with boxes that contain three compartments:
+* The top compartment contains the name of the class. 
+* The middle compartment contains the attributes of the class.  Aka data, fields, state characteristics
+* The bottom compartment contains the operations the class can execute. Aka behaviors, methods, functions, services
+
+== "class creators" versus "client programmers" ==
+
+source:
+http://www.fi.muni.cz/usr/jkucera/tic/tic0016.html
+
+class creators (those who create new data types) and client programmers (the class consumers who use the data types in their applications).
+
+== access specifiers in C++ ==
+
+source:
+https://www.fi.muni.cz/usr/jkucera/tic/tic0063.html
+
+public, private, and protected
+
+== composition ==
+
+What is composition?
+
+source:
+http://www.drbio.cornell.edu/pl47/programming/TICPP-2nd-ed-Vol-one-html/Chapter14.html
+
+create objects of your existing class inside the new class. 
+This is called composition because the new class is composed of objects of existing classes.
+
+UML symbol for composition is a diamon
+
+   --------
+   | team |
+   --------
+       ^
+      < >
+       v
+       |
+       |
+   ----------
+   | player |
+   ----------
+
+== inheritance in UML ==
+
+What is the UML symbol for inheritance?
+Answer: arrow pointing from subclass to superclass
+
+                      ---------------
+(superclass)          |     number  |
+                      ---------------
+                       ^           ^
+("is a kind of")       |           |
+                       |           |
+                -----------   ------------
+(subclass)      | integer |   | rational |
+                -----------   ------------
+
+
+== override a function ==
+
+What does it mean to "overrride" a function?
+
+source:
+http://www.drbio.cornell.edu/pl47/programming/TICPP-2nd-ed-Vol-one-html/Chapter15.html
+
+redefinition of a function in a subclass
+
+== early versus late binding ==
+
+source: 
+http://www.learncpp.com/cpp-tutorial/124-early-binding-and-late-binding/
+
+"Early binding (also called static binding) means the compiler is able to directly associate the identifier name (such as a function or variable name) with a machine address. "
+
+"In some programs, it is not possible to know which function will be called until runtime (when the program is run). This is known as late binding (or dynamic binding). In C++, one way to get late binding is to use function pointers."
+
+== stack versus heap ==
+
+source: 
+http://net-informations.com/faq/net/stack-heap.htm
+
+Stack is used for static memory allocation and Heap for dynamic memory allocation, both stored in the computer's RAM .
+
+Variables allocated on the stack are stored directly to the memory and access to this memory is very fast, and it's allocation is dealt with when the program is compiled
+
+Variables allocated on the heap have their memory allocated at run time and accessing this memory is a bit slower, but the heap size is only limited by the size of virtual memory 
+
+source:
+http://www.programmerinterview.com/index.php/data-structures/difference-between-stack-and-heap/
+
+== use case ==
+
+What is a use case?
+
+source:
+https://en.wikipedia.org/wiki/Use_case
+
+a use case is a list of actions or event steps, typically defining the interactions between a role (known in the Unified Modeling Language as an actor) and a system, to achieve a goal.
+
+== CRC card ==
+
+What is a CRC card?
+
+source:
+https://en.wikipedia.org/wiki/Class-responsibility-collaboration_card
+
+Class-responsibility-collaboration (CRC) cards are a brainstorming tool used in the design of object-oriented software.
+recommended by extreme programming supporters.
+
+CRC cards are usually created from index cards. Members of a brainstorming session will write up one CRC card for each relevant class/object of their design. The card is partitioned into three areas:
+
+On top of the card, the class name
+On the left, the responsibilities of the class
+On the right, collaborators (other classes) with which this class interacts to fulfill its responsibilities
+
+== Occam's Razor ==
+
+What is Occam's Razor?
+
+source:
+https://en.wikipedia.org/wiki/Occam%27s_razor
+
+"Among competing hypotheses, the one with the fewest assumptions should be selected."
+
+== iterative development ==
+
+Why is an iterative development process valuable?
+
+source:
+http://searchsoftwarequality.techtarget.com/definition/iterative-development
+
+In iterative development,  feature code is designed, developed and tested in repeated cycles. With each iteration, additional features can be designed, developed and tested until there is a fully functional software application ready to be deployed to customers.
+
+== Extreme Programming ==
+What are the two most important concpets in Extreme Programming?
+
+Unit Testing. Write test cases before implementing code
+
+Pair programming
