@@ -19,12 +19,20 @@ int main()
 	cout << "b: ";
 	b.print();
 	
-	cout << "MULT a*b" << endl;
+	cout << endl << "MULT a*b" << endl;
 	c = a * b; // uses function over-ride
 	c.print();
 	
-	cout << "DIVIDE a/b" << endl;
-	c = a / b;
+	cout << endl << "DIVIDE a/b" << endl;
+	c = a / b; // uses function over-ride
+	c.print();
+
+	cout << endl << "ADD a+b" << endl;
+	c = a + b; // uses function over-ride
+	c.print();
+
+	cout << endl << "SUBTRACT a-b" << endl;
+	c = a - b; // uses function over-ride
 	c.print();
 	
 	return 0;

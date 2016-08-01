@@ -43,10 +43,28 @@ Fraction operator*(const Fraction & p1, const Fraction & p2)
 // non-member function override
 Fraction operator/(const Fraction & p1, const Fraction & p2)
 {
-	Fraction temp = p2;
+	Fraction temp=p2; // copy 
 	
 	temp.recip();
 	return temp * p1;
 }
 
+// non-member function override
+Fraction operator+(const Fraction & p1, const Fraction & p2)
+{
+	Fraction temp;
+	
+	temp.numer = p1.numer*p2.denom + p2.numer*p1.denom;
+	temp.denom = p1.denom * p2.denom;
+	return temp;
+}
 
+// non-member function override
+Fraction operator-(const Fraction & p1, const Fraction & p2)
+{
+	Fraction temp;
+	
+	temp.numer = p1.numer*p2.denom - p2.numer*p1.denom;
+	temp.denom = p1.denom * p2.denom;
+	return temp;
+}

@@ -19,5 +19,7 @@ public:
     // non-member operator overrides which have access to the private data
 	friend Fraction operator*(const Fraction & p, const Fraction &);
 	friend Fraction operator/(const Fraction & p, const Fraction &);
+	friend Fraction operator+(const Fraction & p, const Fraction &);
+	friend Fraction operator-(const Fraction & p, const Fraction &);
 };
 
