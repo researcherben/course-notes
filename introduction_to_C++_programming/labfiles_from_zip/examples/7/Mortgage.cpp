@@ -8,12 +8,22 @@ using namespace std;
 
 #include "Mortgage.h"
 
+/*
+// this requires a no-argument constructor in "Loan.h"
 Mortgage::Mortgage(string name, int years, double amt, double rate)
 {
 	setName(name);
 	setYears(years);
 	setAmount(amt);
 	setRate(rate);
+	payment = computePayment();
+	balance = amt;
+}
+*/
+
+Mortgage::Mortgage(string name, int years, double amt, double rate) : 
+    Loan(name, years, amt, rate) // explicit call to base class using member initialization list
+{
 	payment = computePayment();
 	balance = amt;
 }

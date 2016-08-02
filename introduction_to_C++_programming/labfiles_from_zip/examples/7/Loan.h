@@ -26,7 +26,7 @@ public:
         //  in order to compile any class that is derived from
         //  Loan and that does not use a member initialization list
 	    
-    //  Loan() { }
+    //Loan() { }
 	
 	string getName(); 	
 	double getAmount();
