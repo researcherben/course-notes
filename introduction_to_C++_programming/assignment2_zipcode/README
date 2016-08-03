@@ -1,0 +1,9 @@
+Use the Zipcode class (source code in instructor_share/zipcode-v2) to write a C++ program that reads a CSV file called bigcities.csv and uses the data in the file to initialize an array of Zipcode objects.  After reading the data file, your program should report the total distance accumulated by starting at the first location in the file and traveling to all the other locations, in the order in which they appear in the file.  Your program should list the city names and the total distance.  (We want the total distance starting at the first location in the file and ending at the last location in the file - a one-way trip.  Do not include the distance to return back to the starting location.)
+
+* You may not make any changes to the Zipcode class.  
+* Your program should print an error message and terminate if the input file does not exist.
+* You may assume that there will be no more than 50 records in bigcities.csv.  (I may change the list of cities when testing.)
+* Do not submit source code for the Zipcode class, just the .cpp file(s) that you write.
+* Along with your source code, submit a makefile that I can use to build your program.
+
+Challenge:  Instead of printing total distance when traveling to the cities in the order in which they appear in the file, determine the optimal (shortest distance) order in which to visit the cities.  Your program should then print the order in which to visit the cities and the total distance.
